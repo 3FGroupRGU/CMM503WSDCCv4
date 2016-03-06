@@ -1,5 +1,12 @@
-.heading {
+
+h1 {
     background-color: aqua;
     font-family: "Arial Black", "Vardana";
     font-weight: 500;
+}
+
+body {
+    background-color: Black;
+    font-family: "Calibri";
+    color: aliceblue;
 }
