@@ -10,6 +10,7 @@
 
 .title {
     border: groove;
+    background-color: black;
     width: 65%;
     height: auto;
     float: inherit;
