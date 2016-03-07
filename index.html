@@ -2,14 +2,21 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>General Bugginess Incident Pages</title>
-    <img src="GBImage.jpg">
+    <title>General Bugginess</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
 <body>
 <div class="heading">
-<h1>General Bugginess Tracking Pages</h1>
+    <div class="b1">
+    <img class="b1a" src="GBImage.png"/>
+        </div>
+    <div class="title">
+<h1>General Bugginess Fault Forms</h1>
+    </div>
+    <div class="b2">
+<img class="b2a" src="GBImage2.png"/>
+    </div>
 </div>
 <div class="loginBox">
     <h3>Login Form</h3>
@@ -19,7 +26,8 @@
         <input type="text" name="username" placeholder="username" /><br><br>
         <label>Password:</label><br>
         <input type="password" name="password" placeholder="password" />  <br><br>
-        <input type="submit" name="submit" value = "login"/>
+        <input class="login1" type="submit" name="submit" value="login"/>
+        <input class="register1" type="submit" name="submit" value="register"/>
     </form>
     <div class="error"><?php //echo $error;?><?php //echo $username; echo $password;?></div>
 

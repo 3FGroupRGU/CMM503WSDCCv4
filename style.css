@@ -1,0 +1,49 @@
+
+.heading {
+    border: groove;
+    border-color: aliceblue;
+    width: 100%;
+    height: 30%;
+    align-content: center;
+}
+
+.title {
+    border: groove;
+    width: 65%;
+    height: auto;
+    float: inherit;
+}
+h1 {
+    text-align: center;
+    font-family: inherit;
+    font-weight: 400;
+}
+
+.b1 {
+    border: groove;
+    border-color: aliceblue;
+    width: 10%;
+    height: 10%;
+    align-self: inherit;
+}
+.b2 {
+    border: groove;
+    border-color: aliceblue;
+    width: 10%;
+    height: 10%;
+    align-self: inherit;
+}
+
+.b1a {
+    width: 100%;
+    height: 100%;
+}
+
+.b2a {
+    width: 100%;
+    height: 100%;
+}
+body {
+    background-color: black;
+    color: azure;
+}
