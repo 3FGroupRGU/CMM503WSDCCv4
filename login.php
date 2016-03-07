@@ -10,7 +10,7 @@
 
 <body>
 <div id="holder"></div>
-<div id="header"><img id="bug1" src="GBImage.png"/><img id="bug2" src="GBImage2.png"/></div>
+<div id="header"></div>
 <div id="NavBar">
     <nav>
         <ul>
