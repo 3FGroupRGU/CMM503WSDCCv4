@@ -28,7 +28,25 @@
         <h2>Your Message Here</h2><br>
         <h6>Your Message</h6>
     </div>
-    <div id="contentright"></div>
+    <div id="contentright">
+        <div class="loginBox">
+            <h3>Login Form</h3>
+            <br><br>
+            <form method="post" action="login.php">
+                <label>Username:</label><br>
+                <input type="text" name="username" placeholder="username" /><br><br>
+                <label>Password:</label><br>
+                <input type="password" name="password" placeholder="password" />  <br>
+                <label>E-mail</label><br>
+                <input type="email" name="email" placeholder="e-mail" />
+                <br>
+                <label>Work No:</label><br>
+                <input type="tel" name="telephone" placeholder="Work Telephone" /><br><br>
+                <input class="login1" type="submit" name="submit" value="login"/>
+                <input class="register1" type="submit" name="submit" value="register"/>
+            </form>
+            <div class="error"><?php //echo $error;?><?php //echo $username; echo $password;?></div>
+    </div>
 </div>
 <div id="footer"></div>
 </body>
