@@ -9,7 +9,7 @@
 }
 
 .title {
-    max-font-size: 800;
+    font-stretch: expanded;
     float: none;
     text-align: center;
 }
