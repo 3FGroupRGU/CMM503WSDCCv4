@@ -10,7 +10,8 @@
 
 <body>
 <div id="holder"></div>
-<div id="header"></div>
+<div id="header">
+</div>
 <div id="NavBar">
     <nav>
         <ul>
@@ -22,11 +23,13 @@
 </div>
 <div id="content">
     <div id="pageheading">
-        <h1>Page Heading</h1>
+        <h1>Welcome</h1>
     </div>
     <div id="contentleft">
-        <h2>Your Message Here</h2><br>
-        <h6>Your Message</h6>
+        <h2>Welcome to the General Bugginess fault logging page.</h2><br>
+        <h6>Before you begin.</h6><br>
+        <p>This site is for registered and authorised users only. On this site you can upload your fault logs or enter a new fault manually. The status of which will be assessed and updated by the IT team as they work through their call logs.</p><br>
+        <p>Please login or register to continue on this site.</p>
     </div>
     <div id="contentright">
         <div class="loginBox">
