@@ -33,21 +33,6 @@
         <p>Please login or register to continue on this site.</p>
     </div>
     <div id="contentright">
-        <div class="loginBox">
-            <h3>Login Form</h3>
-            <br><br>
-            <form method="post" action="login.php">
-                <label>Username:</label><br>
-                <input type="text" name="username" placeholder="username" required="required"/><br><br>
-                <label>Password:</label><br>
-                <input type="password" name="password" placeholder="password" required="required"/>  <br>
-                <label>E-mail</label><br>
-                <input type="email" name="email" placeholder="e-mail" />
-                <br>
-                <label>Work No:</label><br>
-                <input type="tel" name="telephone" placeholder="Work Telephone" /><br><br>
-                <input class="login1" type="submit" name="submit" value="login"/>
-            </form>
             <div class="error"><?php //echo $error;?><?php //echo $username; echo $password;?></div>
     </div>
 </div>
