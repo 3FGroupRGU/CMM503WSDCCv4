@@ -10,7 +10,9 @@
 
 <body>
 <div id="holder"></div>
-<div id="header"></div>
+<div id="header">
+    <title>General Buginess Fault Tracker</title>
+</div>
 <div id="NavBar">
     <nav>
         <ul>
