@@ -38,9 +38,9 @@
             <br><br>
             <form method="post" action="login.php">
                 <label>Username:</label><br>
-                <input type="text" name="username" placeholder="username" /><br><br>
+                <input type="text" name="username" placeholder="username" required="required"/><br><br>
                 <label>Password:</label><br>
-                <input type="password" name="password" placeholder="password" />  <br>
+                <input type="password" name="password" placeholder="password" required="required"/>  <br>
                 <label>E-mail</label><br>
                 <input type="email" name="email" placeholder="e-mail" />
                 <br>
