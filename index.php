@@ -11,7 +11,7 @@
 <body>
 <div id="holder"></div>
 <div id="header">
-    <title>General Buginess Fault Tracker</title>
+        <h1>General Buginess Fault Tracker</h1>
 </div>
 <div id="NavBar">
     <nav>
@@ -29,7 +29,7 @@
     </div>
     <div id="contentleft">
         <h2>Welcome to the General Bugginess fault logging page.</h2><br>
-        <h6>Before you begin.</h6><br>
+        <h3>Before you begin.</h3><br>
         <p>This site is for registered and authorised users only. On this site you can upload your fault logs or enter a new fault manually. The status of which will be assessed and updated by the IT team as they work through their call logs.</p><br>
         <p>Please login or register to continue on this site.</p>
     </div>

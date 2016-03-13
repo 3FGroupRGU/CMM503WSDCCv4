@@ -11,7 +11,7 @@
 <body>
 <div id="holder"></div>
 <div id="header">
-    <title>General Buginess Fault Tracker</title>
+    <h1>General Buginess Fault Tracker</h1>
 </div>
 <div id="NavBar">
     <nav>
@@ -29,7 +29,7 @@
     </div>
     <div id="contentleft">
         <h2>Please Login Here</h2><br>
-        <h6>Before you can look at or update any of your fault logs on this site you will have to login to the site.</h6><br>
+        <h3>Before you can look at or update any of your fault logs on this site you will have to login to the site.</h3><br>
         <p>If you have no valid account please complete the registration form.</p><br>
         <p>Once the registration form has been submitted it will be assessed by the IT team prior to your accessibility to the site.</p>
     </div>
