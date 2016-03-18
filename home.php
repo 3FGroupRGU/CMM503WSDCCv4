@@ -1,7 +1,6 @@
 <?php
 	session_start();
-	include('connect.php');
-	$_SESSION['username']= $username;
+	require('connect.php');
 	session_destroy()
 ?>
 <!doctype html>
@@ -14,6 +13,9 @@
 </head>
 
 <body>
+<div id="header">
+	<h1>Ginger Bugginess Fault Tracker</h1>
+</div>
 <div id="NavBar">
 <nav>
 	<ul>
