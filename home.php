@@ -1,8 +1,3 @@
-<?php
-	session_start();
-	require('connect.php');
-	session_destroy()
-?>
 <!doctype html>
 <html>
 <head>
