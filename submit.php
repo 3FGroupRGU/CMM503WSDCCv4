@@ -17,7 +17,7 @@ if(isset($_POST["submit"]))
     $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
     if(mysqli_num_rows($result) == 1)
     {
-        $msg = "Sorry...This email already exists...";
+        $msg = "Sorry...This email address already exists...";
     }
     else
     {

@@ -8,7 +8,6 @@ if (ini_get("session.use_cookies")){
         $params["secure"], $params["httponly"]
     );
 }
-    include('login.php'); // Include Login Script
 
     if ((isset($_SESSION['username']) != ''))
     {
