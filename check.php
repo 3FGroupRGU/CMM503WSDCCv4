@@ -10,7 +10,7 @@ $login_user=$row['username'];
 
 if(!isset($user_check))
 {
-header("Location: home.php");
+header("Location: index.php");
 }
 session_destroy()
 ?>
