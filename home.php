@@ -1,5 +1,5 @@
 <?php 
- require("check.php");
+ include("check.php");
 ?>
 <!doctype html>
 <html>
