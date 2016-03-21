@@ -19,7 +19,7 @@
 	<ul>
 		<li><a href="index.php">Home</a></li>
 		<li><a href="FileUpload.php">File Upload</a></li>
-		<li><a href="LogOut.php">Log Out</a></li>
+		<li><a href="logout.php">Log Out</a></li>
 	</ul>
 </nav>
 </div>

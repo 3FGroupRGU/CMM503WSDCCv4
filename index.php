@@ -1,20 +1,4 @@
-<?php
-session_start();
-$_SESSION=array();
-if (ini_get("session.use_cookies")){
-    $params=session_get_cookie_params();
-    setcookie(session_name(), '',time() - 42000,
-        $params["path"], $params["domain"],
-        $params["secure"], $params["httponly"]
-    );
-}
 
-    if ((isset($_SESSION['username']) != ''))
-    {
-    header('Location: home.php');
-    }
-session_destroy()
-?>
 <!doctype html>
 <!--design has been followed from Simpletut.com via https://www.youtube.com/watch?v=Qqcj4nYkcks'-->
 <html>
@@ -33,10 +17,10 @@ session_destroy()
 <div id="NavBar">
     <nav>
         <ul>
-            <li><a href="index.php">Home</a></li>
-            <li><a href="login.php">Login</a></li>
-            <li><a href="register.php">Register</a></li>
-            <li><a href="ForgotPassword.php">Forgot Login</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Register</a></li>
+            <li><a href="#">Forgot Login</a></li>
         </ul>
     </nav>
 </div>
@@ -46,11 +30,13 @@ session_destroy()
     </div>
     <div id="contentleft">
         <h2>Welcome to the Ginger Bugginess fault logging page.</h2><br>
-        <h3>Before you begin.</h3><br>
-        <p>This site is for registered and authorised users only. On this site you can upload your fault logs or enter a new fault manually. The status of which will be assessed and updated by the IT team as they work through their call logs.</p><br>
-        <p>Please login or register to continue on this site.</p>
+        <h3>Site Down For Maintenance</h3><br>
+        <p>This site is temporarily unavailable.</p><br>
+        <p>This is due to the numpty who's working on it being a pillock and having to re-wrie all his PHP.</p>
     </div>
     <div id="contentright">
+        <h2>Nothing Here to See!</h2><br>
+        <p>Please be good little sheep and move along.....</p>
             <div class="error"><?php //echo $error;?><?php //echo $username; echo $password;?></div>
     </div>
 </div>
