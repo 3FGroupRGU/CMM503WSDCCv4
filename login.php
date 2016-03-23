@@ -1,10 +1,8 @@
 <?php
 session_start();
-
+require_once 'connect.php';
 include("connect.php"); //Establishing connection with our database
 
-$error = ""; //Variable for storing our errors.
-if(isset($_POST["submit"]))
 {
     if(empty($_POST["username"]) || empty($_POST["password"]))
     {
@@ -14,26 +12,19 @@ if(isset($_POST["submit"]))
         // Define $username and $password
         $username=$_POST['username'];
         $password=$_POST['password'];
-
-        // To protect from MySQL injection
-        $username = stripslashes($username);
-        $password = stripslashes($password);
-        $username = mysqli_real_escape_string($db, $username);
-        $password = mysqli_real_escape_string($db, $password);
-        $password = md5($password);
-
+        echo "creating sql";
         //Check username and password from database
         $sql="SELECT userID FROM users WHERE username='$username' and password='$password'";
         $result=mysqli_query($db,$sql);
         $row=mysqli_fetch_array($result,MYSQLI_ASSOC) ;
-
+    var_dump($result);
         //If username and password exist in our database then create a session.
         //Otherwise echo error.
-
+        echo "checking responsel";
         if(mysqli_num_rows($result) == 1)
         {
             $_SESSION['username'] = $username; // Initializing Session
-            header("location: home.php"); // Redirecting To Other Page
+            //header("location: home.php"); // Redirecting To Other Page
         }else
         {
             $error = "Incorrect username or password.";
@@ -45,7 +36,6 @@ session_destroy()
 ?>
 
 <!doctype html>
-<!--design has been followed from Simpletut.com via https://www.youtube.com/watch?v=Qqcj4nYkcks'-->
 <html>
 <head>
     <meta charset="utf-8">
@@ -55,7 +45,7 @@ session_destroy()
 </head>
 
 <body>
-<div id="holder"></div>
+<div id="holder">
 <div id="header">
     <h1>Ginger Bugginess Fault Tracker</h1>
 </div>
@@ -80,22 +70,24 @@ session_destroy()
         <p>Once the registration form has been submitted it will be assessed by the IT team prior to your accessibility to the site.</p>
     </div>
     <div id="contentright">
-        <div class="loginBox">
+        <div class="loginBox">-
             <h3>Login Form</h3>
             <br><br>
-            <form class="form1" method="post" action="login.php">
+            <form method="post" action="login.php">
                 <label>Username:</label><br>
-                <input type="text" name="username" placeholder="username" />
+                <input type="text" name="username" placeholder="Username" />
                 <br><br>
                 <label>Password:</label><br>
-                <input type="password" name="password" placeholder="password" />
+                <input type="password" name="password" placeholder="Password" />
                 <br><br>
-                <input class="login1" type="submit" name="submit" value="login"/>
+                <input type="submit" name="submit" value="login"/>
                 <input type="reset" value="Clear">
             </form>
             <div class="error"><?php //echo $error;?><?php //echo $username; echo $password;?></div>
     </div>
 </div>
+</div>
+    </div>
 <div id="footer"></div>
 </body>
 </html>

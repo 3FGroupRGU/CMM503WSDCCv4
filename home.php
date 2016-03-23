@@ -1,5 +1,8 @@
-<?php 
+<?php
+ session_start();
  include("check.php");
+$user_check=$_SESSION['username'];
+session_destroy()
 ?>
 <!doctype html>
 <html>
@@ -11,6 +14,7 @@
 </head>
 
 <body>
+<div id="holder">
 <div id="header">
 	<h1>Ginger Bugginess Fault Tracker</h1>
 </div>
@@ -29,5 +33,6 @@
 <br><br>
 <h2><em>You are now logged in as an official user</em></h2>
 <p>Please navigate to the file upload page via the link above.</p>
+    </div>
 </body>
 </html>

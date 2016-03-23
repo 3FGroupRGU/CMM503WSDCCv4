@@ -1,4 +1,5 @@
 <?php
+require_once 'connect.php';
 include("connect.php");
 $sql="SELECT * FROM bugs WHERE bugs.ID=".$_GET["id"];
 $result=mysqli_query($db,$sql);
@@ -10,17 +11,9 @@ $bugDesc=$row['desc'];
 echo"<h2>".$bugTitle."</h2>";
 echo"<p>".$bugDesc."</p>";
 
-$sql="SELECT * FROM comments WHERE bugID=".$_GET["id"];
-$result=mysqli_query($db,$sql);
-while ($row=mysqli_fetch_assoc($result)){
-    $commentTitle=$row['title'];
-    $commetn=$row['comment'];
-
-    echo'<h3>'.$title.'</h3>';
-    echo'<p>'.$comment.'</p>';
-}
 ?>
 <!doctype html>
+<html>
 <head>
     <meta charset="utf-8">
     <title>Ginger Bugginess</title>
@@ -28,31 +21,39 @@ while ($row=mysqli_fetch_assoc($result)){
     <link rel="stylesheet" href="menu.css" type="text/css" />
 </head>
 <body>
-<div id="content">
-    <form class="bugInfo">
+<div id="holder">
+    <div id="header">
+        <h1>Ginger Bugginess Fault Tracker</h1>
+    </div>
+    <div id="NavBar">
+        <nav>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="login.php">Login</a></li>
+                <li><a href="register.php">Register</a></li>
+                <li><a href="ForgotPassword.php">Forgot Login</a></li>
+            </ul>
+        </nav>
+    </div>
+<div class="content">
+    <form action="submit.php" methos="POST" class="bugInfo">
    <label>Bug Title:</label>
-    <input type="text" name="BugTitle" placeholder="Bug Title"><br>
-    <label>Bug Description</label>
-    <input type="text" name="BugDesc" placeholder="Bug Description"><br>
-        <label>User ID</label>
-        <input type="text" name="$userID" placeholder="User ID"><br>
-        <label>Date Bug Raised</label>
+    <input type="text" name="bugTitle" placeholder="Bug Title"><br>
+    <label>Bug Description</label><br>
+    <textarea name="bugDesc" rows="5" cols="40" placeholder="Bug Description"></textarea><br>
+        <label>User ID</label><br>
+        <input type="text" name="userID" placeholder="User ID"><br>
+        <label>Date Bug Raised</label><br>
         <input type="date" name="date" placeholder="Date Of Bug"><br>
-        <label>Date Bug Fixed</label>
+        <label>Date Bug Fixed</label><br>
         <input type="date" name="date" placeholder="Date Fixed"><br>
-        <?php
-            if (isset($_POST['SUBMIT1'])) {
-
-            }
-        if (isset($ch1=='Fixed')) {
-            $ch1='checked';
-        }
-        ?>
-        <input type="Checkbox" name="ch1" value="Fixed">
+        <label>If checked IT has fixed Bug</label><br>
+        <input type="Checkbox" name="$ch1" value="Fixed">
         <?php
             print $ch1;
         ?>
     </form>
+</div>
 </div>
 </body>
 

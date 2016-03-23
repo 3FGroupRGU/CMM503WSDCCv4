@@ -8,7 +8,6 @@ header('Location: home.php');
 session_destroy()
 ?>
 <!doctype html>
-<!--design has been followed from Simpletut.com via https://www.youtube.com/watch?v=Qqcj4nYkcks'-->
 <html>
 <head>
     <meta charset="utf-8">
@@ -46,7 +45,8 @@ session_destroy()
             <div class="error"><?php //echo $error;?><?php //echo $username; echo $password;?></div>
         </div>
     </div>
-    <div id="footer"></div>
+    <div id="footer">
+    </div>
 </body>
 </html>
 

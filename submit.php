@@ -1,4 +1,6 @@
 <?php
+require_once 'connect.php';
+include("connect.php");
 $msg = "";
 if(isset($_POST["submit"]))
 {
