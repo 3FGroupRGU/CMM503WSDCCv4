@@ -2,29 +2,45 @@
 session_start();
 require_once 'connect.php';
 include("connect.php"); //Establishing connection with our database
+include("logintools.php");
 
+$error ="";
+if (isset($_POST["submit"]))
 {
     if(empty($_POST["username"]) || empty($_POST["password"]))
     {
         $error = "Both fields are required.";
     }else
     {
+
         // Define $username and $password
         $username=$_POST['username'];
         $password=$_POST['password'];
-        echo "creating sql";
+
+
+        $username = stripcslashes($db, $username);
+        $password= stripslashes($db, $password);
+        $username = mysqli_real_escape_string($db, $username);
+        $password = mysqli_real_escape_string($db, $password);
+        $password = md5($password);
+
         //Check username and password from database
-        $sql="SELECT userID FROM users WHERE username='$username' and password='$password'";
+        //$sql="SELECT userID FROM users WHERE 'username'='$username' and 'password'='$password'";
+        $sql="SELECT userID FROM users WHERE username='".$username."' and password='".$password."'";
         $result=mysqli_query($db,$sql);
-        $row=mysqli_fetch_array($result,MYSQLI_ASSOC) ;
-    var_dump($result);
+        $row=mysqli_fetch_assoc($result);
+
+        echo $sql;
         //If username and password exist in our database then create a session.
         //Otherwise echo error.
-        echo "checking responsel";
+        echo " checking response ";
+        echo " rows: ".mysqli_num_rows($result);
         if(mysqli_num_rows($result) == 1)
         {
+
             $_SESSION['username'] = $username; // Initializing Session
-            //header("location: home.php"); // Redirecting To Other Page
+            //echo $_SESSION['username'];
+            header("location: home.php"); // Redirecting To Other Page
         }else
         {
             $error = "Incorrect username or password.";
@@ -32,7 +48,6 @@ include("connect.php"); //Establishing connection with our database
 
     }
 }
-session_destroy()
 ?>
 
 <!doctype html>
@@ -70,7 +85,7 @@ session_destroy()
         <p>Once the registration form has been submitted it will be assessed by the IT team prior to your accessibility to the site.</p>
     </div>
     <div id="contentright">
-        <div class="loginBox">-
+        <div class="loginBox">
             <h3>Login Form</h3>
             <br><br>
             <form method="post" action="login.php">
