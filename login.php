@@ -32,8 +32,8 @@ if (isset($_POST["submit"]))
         echo $sql;
         //If username and password exist in our database then create a session.
         //Otherwise echo error.
-        echo " checking response ";
-        echo " rows: ".mysqli_num_rows($result);
+        //echo " checking response ";
+        //echo " rows: ".mysqli_num_rows($result);
         if(mysqli_num_rows($result) == 1)
         {
 
