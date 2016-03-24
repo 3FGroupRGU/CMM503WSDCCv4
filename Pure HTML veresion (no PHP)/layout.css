@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: coral;
+}
+
+#holder {
+    width:980px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 21px;
+    margin-bottom: 21px;
+}
+
+#header {
+    height: 100px;
+    margin-bottom: 1px;
+    background-color: #ffbbaa;
+}
+#NavBar {
+    height: 60px;
+    background-color: brown;
+}
+#content {
+    height: auto;
+    clear: both;
+    overflow: auto;
+}
+
+#pageheading {
+    height: auto;
+    padding: 11px;
+}
+
+#contentleft {
+    width: 280px;
+    float: left;
+    padding-left: 11px;
+    padding-top: 11px;
+}
+#contentright {
+    width: 680px;
+    float: right;
+}
+#footer {
+    height: 100px;
+}
+
+h1 {
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkred;
+}
+
+h2 {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222222;
+    font-weight: lighter;
+}
+
+h3 {
+    text-align: justify;
+    margin: 0;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding-top: 11px;
+    padding-bottom: 11px;
+}
+
+title {
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkred;
+    font-size: large;
+}
+
+.fileuploadholder {
+    width: 400px;
+    height: 60px;
+    margin: 60px auto 0px auto;
+    background-color: #ffbb44;
+    border: 2px;
+    border-color: brown;
+    padding: 4px;
+}
+
+.buglisting {
+    text-align: center;
+    width: 400px;
+    height: auto;
+    margin: 60px auto 0px auto;
+    background-color: #ffbb44;
+    border: groove;
+    border: 2px;
+    border-color: brown;
+    padding: 4px;
+}
+
+.content {
+    width: 100%;
+    height: auto;
+    margin: 60px auto 0px auto;
+    background-color: #ffbbaa;
+    border: 10px;
+    border-color: #1e5eb6;
+    padding: 4px;
+
+}
+
+.comments {
+    margin: 10px auto 0px auto;
+    height: 600px;
+    width: 100%;
+    border: ridge;
+    border: 5px;
+    background-color: coral;
+    padding: 4px
+}
+
+.bugInfo {
+    text-align: left;
+    font-family: Arial, Verdana;
+    margin: 10px auto 0px auto;
+    height: 600px;
+    width: 50%;
+    border: ridge;
+    border: 5px;
+    background-color: #ffbbaa;
+    padding: 4px
+}
+
+.registerBox {
+    align-content: left;
+    padding: 10%;
+    border: ridge;
+    border-color: #c0392b;
+    float: right;
+    width: 100%;
+    height: auto;
+}
