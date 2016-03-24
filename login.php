@@ -2,7 +2,6 @@
 session_start();
 require_once 'connect.php';
 include("connect.php"); //Establishing connection with our database
-include("logintools.php");
 
 $error ="";
 if (isset($_POST["submit"]))
